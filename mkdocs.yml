@@ -1,0 +1,85 @@
+site_name: Rules-driven maDMP
+site_description: >-
+  Research and data flow management, assessment and monitoring for glider
+  missions, from rule-driven generated maDMPs. The SOCIB thematic pilot of
+  OSTrails, within JERICO and CORIS.
+site_url: https://pstcricq.github.io/ostrails-madmp-documentations/
+repo_url: https://github.com/pstcricq/ostrails-madmp-documentations
+edit_uri: ""
+
+theme:
+  name: material
+  language: en
+  favicon: assets/favicon.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+# Numbered, because the text refers to sections by number and a reader has to be
+# able to find them. The numbers match the file names, so nothing drifts.
+nav:
+  - 1. At a glance: index.md
+  - 2. Context: 02-context.md
+  - 3. The problem: 03-the-problem.md
+  - 4. The principle: 04-the-principle.md
+  - 5. Architecture: 05-architecture.md
+  - 6. The rules: 06-the-rules.md
+  - 7. Standards and profiles: 07-standards-and-profiles.md
+  - 8. A project: 08-a-project.md
+  - 9. Generation: 09-generation.md
+  - 10. Publication: 10-publication.md
+  - 11. The deployment: 11-the-deployment.md
+  - 12. Submission and the registry: 12-submission-and-registry.md
+  - 13. Engineering practices: 13-engineering-practices.md
+  - 14. What is next: 14-what-is-next.md
+  - 15. Lessons: 15-lessons.md
+  - 16. Known limits: 16-known-limits.md
+  - 17. Annexes: 17-annexes.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: fade
+      draggable: false
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: >-
+  SOCIB, as part of the OSTrails project. Funded by the European Union.
